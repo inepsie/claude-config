@@ -1,0 +1,22 @@
+# Fichiers sensibles
+.credentials.json
+*.token
+*.key
+
+# Données de session temporaires
+projects/
+todos/
+shell-snapshots/
+
+# Données d'analytique
+statsig/
+
+# Dossiers temporaires
+.temp/
+.tmp/
+
+# Logs
+*.log
+
+# Plugins téléchargés
+plugins/repos/

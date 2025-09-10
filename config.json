@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "memory": {
+      "command": "npx",
+      "args": [
+        "@modelcontextprotocol/server-memory"
+      ],
+      "env": {
+        "DATA_DIR": "/home/e20230004281/.config/nvim/mcp-memory"
+      }
+    }
+  }
+}
