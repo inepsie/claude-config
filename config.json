@@ -8,6 +8,15 @@
       "env": {
         "DATA_DIR": "/home/e20230004281/.config/nvim/mcp-memory"
       }
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "PLACEHOLDER_TOKEN_STORED_IN_CREDENTIALS_JSON"
+      }
     }
   }
 }

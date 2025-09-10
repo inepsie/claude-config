@@ -26,12 +26,24 @@ cp -r ~/.claude-backup/* ~/.claude/
 cat ~/.claude/config.json
 ```
 
-## Configuration MCP Memory Server
+## Configuration MCP Servers
 
+### Memory Server
 Le serveur MCP Memory est configuré pour utiliser :
 - **Répertoire de données** : `~/.config/nvim/mcp-memory`
 - **Format** : JSON avec tags et contexte
 - **Commandes** : Via `npx @modelcontextprotocol/server-memory`
+
+### GitHub Server
+Le serveur MCP GitHub nécessite un token d'accès personnel :
+1. Créer un token GitHub avec les permissions appropriées
+2. L'ajouter dans `.credentials.json` :
+```json
+{
+  "githubToken": "votre_token_github_ici"
+}
+```
+3. Le serveur utilisera automatiquement ce token depuis `.credentials.json`
 
 ## Workflow intégré
 
