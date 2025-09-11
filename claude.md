@@ -10,6 +10,9 @@
 - `mcp memory add <content>` - Ajouter une information
 - `mcp memory list` - Lister toutes les entrées
 
+## Commandes personnalisées
+- `/auto-push [on|off|status]` - Active/désactive le workflow automatique pour le projet courant
+
 ## Instructions comportementales globales
 - Utiliser la mémoire MCP pour CHAQUE réponse
 - Privilégier la modification à la création
