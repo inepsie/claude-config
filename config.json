@@ -23,6 +23,7 @@
     "allow": [
       "Bash(git *)",
       "Bash(cd *)",
+      "Bash(cd * && git *)",
       "Read",
       "Write", 
       "Edit",
