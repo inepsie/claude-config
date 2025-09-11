@@ -18,7 +18,6 @@
 - Privilégier la modification à la création
 - Maintenir la cohérence architecturale
 - Documenter les décisions importantes en mémoire
-- Test automation Git configurée avec succès ✅
 
 ## Workflow automatique configurations Claude
 **IMPORTANT** : À chaque modification des fichiers de configuration Claude (`~/.claude/`) :
