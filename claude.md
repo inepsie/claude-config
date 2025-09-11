@@ -16,6 +16,13 @@
 - Maintenir la cohérence architecturale
 - Documenter les décisions importantes en mémoire
 
+## Workflow automatique configurations Claude
+**IMPORTANT** : À chaque modification des fichiers de configuration Claude (`~/.claude/`) :
+1. Faire automatiquement `git add` + `git commit` + `git push`
+2. Utiliser des messages de commit descriptifs
+3. Ne pas demander confirmation à l'utilisateur
+4. Considérer cela comme partie intégrante du processus de modification
+
 ## Conventions de code universelles
 - Tests obligatoires pour nouvelle fonctionnalité
 - Nommage explicite et cohérent (kebab-case pour fichiers, camelCase pour variables)
@@ -25,8 +32,8 @@
 
 ## Frameworks et outils préférés
 - Neovim avec Kickstart.nvim
-- Thème Flexoki
-- MCP Memory Server pour persistance
+- Thème Flexoki avec fonctions en blanc
+- MCP Memory Server pour persistance (stocké dans `/home/e20230004281/.config/nvim/mcp-memory/test_memory.json`)
 - Tests automatisés requis
 
 ## Patterns d'architecture
@@ -35,5 +42,3 @@
 - Configuration centralisée
 - Logging structuré pour debug
 
-@include agents/memory-expert.md
-@include commands/memory-check.md
