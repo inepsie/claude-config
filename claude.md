@@ -31,6 +31,7 @@
 - Éviter la duplication de code
 - Commentaires uniquement pour la logique complexe
 - Suivre les patterns existants du projet
+- Test d'automatisation ajouté
 
 ## Frameworks et outils préférés
 - Neovim avec Kickstart.nvim
