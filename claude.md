@@ -23,10 +23,7 @@
 **IMPORTANT** : À chaque modification des fichiers de configuration Claude (`~/.claude/`) :
 1. Faire automatiquement `git add` + `git commit` + `git push`
 2. Utiliser des messages de commit descriptifs
-3. Ne pas demander confirmation à l'utilisateur
-4. Considérer cela comme partie intégrante du processus de modification
-
-**Note technique** : Pour éviter les demandes de confirmation sur les commandes Git automatiques, utiliser le flag `--dangerously-skip-permissions` si nécessaire lors du lancement de Claude Code pour les sessions de travail sur les configurations.
+3. Considérer cela comme partie intégrante du processus de modification
 
 ## Conventions de code universelles
 - Tests obligatoires pour nouvelle fonctionnalité
