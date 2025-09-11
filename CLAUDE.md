@@ -15,3 +15,4 @@
 - Toujours effectuer un commit et push automatique après modification des configs
 - Utiliser des messages de commit descriptifs
 - Ne pas oublier de pousser les changements vers le remote
+- Test modification effectué le 2025-09-12
