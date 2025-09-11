@@ -18,5 +18,16 @@
         "GITHUB_PERSONAL_ACCESS_TOKEN": "PLACEHOLDER_TOKEN_STORED_IN_CREDENTIALS_JSON"
       }
     }
+  },
+  "permissions": {
+    "allowedTools": [
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Read",
+      "Write",
+      "Edit",
+      "MultiEdit"
+    ]
   }
 }
