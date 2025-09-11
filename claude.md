@@ -42,3 +42,5 @@
 - Configuration centralisée
 - Logging structuré pour debug
 
+<!-- Test workflow automatique Claude -->
+
