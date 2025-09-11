@@ -52,4 +52,12 @@ Quand l'utilisateur tape `/auto-push [commande]` :
 2. Utiliser des messages de commit descriptifs
 3. Ne pas demander confirmation à l'utilisateur
 4. Considérer cela comme partie intégrante du processus de modification
+
+**Note** : Si Claude Code demande confirmation pour les commandes Git, relancer avec `claude --dangerously-skip-permissions` pour ce projet.
+```
+
+## Usage recommandé pour projets auto-push
+Pour éviter les demandes de confirmation lors des workflows automatiques :
+```bash
+claude --dangerously-skip-permissions
 ```

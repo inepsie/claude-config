@@ -26,6 +26,8 @@
 3. Ne pas demander confirmation à l'utilisateur
 4. Considérer cela comme partie intégrante du processus de modification
 
+**Note technique** : Pour éviter les demandes de confirmation sur les commandes Git automatiques, utiliser le flag `--dangerously-skip-permissions` si nécessaire lors du lancement de Claude Code pour les sessions de travail sur les configurations.
+
 ## Conventions de code universelles
 - Tests obligatoires pour nouvelle fonctionnalité
 - Nommage explicite et cohérent (kebab-case pour fichiers, camelCase pour variables)
