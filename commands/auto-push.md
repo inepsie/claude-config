@@ -45,9 +45,11 @@ Quand l'utilisateur tape `/auto-push [commande]` :
 6. **Feedback utilisateur** : Confirmer l'action avec des détails du repo
 
 ## Template CLAUDE.md à insérer
+**IMPORTANT** : Remplacer `${PWD}` par le chemin absolu du répertoire courant lors de l'insertion.
+
 ```markdown
 ## ⚠️ WORKFLOW AUTOMATIQUE OBLIGATOIRE - CONFIGURATIONS CLAUDE ⚠️
-**RÈGLE ABSOLUE** : À chaque modification des fichiers de configuration Claude (`~/.claude/`) :
+**RÈGLE ABSOLUE** : À chaque modification des fichiers de ce projet (`${PWD}`) :
 1. **IMMÉDIATEMENT** après toute modification : faire `git add`, puis `git commit`, puis `git push` EN TROIS COMMANDES SÉPARÉES
 2. **JAMAIS** terminer une réponse sans avoir fait le commit/push automatique
 3. **TOUJOURS** utiliser des messages de commit descriptifs avec template Claude
@@ -55,6 +57,6 @@ Quand l'utilisateur tape `/auto-push [commande]` :
 5. **NE PAS ATTENDRE** de commande utilisateur - le faire automatiquement
 6. **ÉVITER** les commandes chaînées avec && pour éviter les demandes d'autorisation
 
-**RAPPEL** : Si tu modifies un fichier dans `~/.claude/`, tu DOIS finir par git add/commit/push dans la même réponse.
+**RAPPEL** : Si tu modifies un fichier dans `${PWD}`, tu DOIS finir par git add/commit/push dans la même réponse.
 
 ```
