@@ -52,6 +52,7 @@ Voir `claude.md` pour le workflow complet incluant :
 - Conventions de code standardisées  
 - Frameworks et outils préférés
 - Patterns d'architecture
+- Test auto-push système ✅
 
 ## Personnalisation
 
