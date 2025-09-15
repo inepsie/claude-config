@@ -15,7 +15,8 @@
       "Bash(GIT_SSH_COMMAND=\"ssh -o BatchMode=yes\" git push -u origin main)",
       "Bash(git commit:*)",
       "Bash(git reset:*)",
-      "Read(//home/e20230004281/.config/nvim/**)"
+      "Read(//home/e20230004281/.config/nvim/**)",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []

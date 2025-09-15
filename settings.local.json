@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sudo apt:*)",
+      "Bash(sudo apt install:*)",
+      "Bash(git clone:*)",
+      "Bash(./build.sh)",
+      "Bash(pkg-config:*)",
+      "Bash(./simple_test)",
+      "Bash(timeout:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
