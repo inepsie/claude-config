@@ -9,7 +9,10 @@
       "Bash(./simple_test)",
       "Bash(timeout:*)",
       "Bash(git add:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(./bin/gpu_raytracer:*)"
     ],
     "deny": [],
     "ask": []

@@ -34,7 +34,7 @@
 - Tests obligatoires pour nouvelle fonctionnalité
 - Nommage explicite et cohérent (kebab-case pour fichiers, camelCase pour variables)
 - Éviter la duplication de code
-- Commentaires uniquement pour la logique complexe
+- **COMMENTAIRES TOUJOURS EN FRANÇAIS** - jamais en anglais sauf APIs externes
 - Suivre les patterns existants du projet
 
 ## Frameworks et outils préférés
