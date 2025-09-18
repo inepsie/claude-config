@@ -57,6 +57,4 @@ Quand l'utilisateur tape `/auto-push [commande]` :
 5. **NE PAS ATTENDRE** de commande utilisateur - le faire automatiquement
 6. **ÉVITER** les commandes chaînées avec && pour éviter les demandes d'autorisation
 
-**RAPPEL** : Si tu modifies un fichier dans `${PWD}`, tu DOIS finir par git add/commit/push dans la même réponse.
-
 ```
