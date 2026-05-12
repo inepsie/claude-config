@@ -7,6 +7,19 @@
 projects/
 todos/
 shell-snapshots/
+sessions/
+file-history/
+paste-cache/
+session-env/
+tasks/
+debug/
+backups/
+cache/
+history.jsonl
+
+# Données MCP runtime
+mcp-memory/
+mcp-needs-auth-cache.json
 
 # Données d'analytique
 statsig/
@@ -20,3 +33,15 @@ statsig/
 
 # Plugins téléchargés
 plugins/repos/
+plugins/cache/
+plugins/data/
+plugins/marketplaces/
+plugins/blocklist.json
+plugins/installed_plugins.json
+plugins/known_marketplaces.json
+
+# État runtime Claude Code
+scheduled_tasks.lock
+.last-cleanup
+telemetry/
+plans/

@@ -1,20 +1,90 @@
 {
   "permissions": {
     "allow": [
-      "Bash(sudo apt:*)",
-      "Bash(sudo apt install:*)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:gist.github.com)",
+      "WebFetch(domain:gist.githubusercontent.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:support.claude.com)",
+      "WebFetch(domain:www.anthropic.com)",
+      "WebFetch(domain:simonwillison.net)",
+      "WebFetch(domain:bevy.org)",
+      "WebFetch(domain:crates.io)",
+      "WebFetch(domain:docs.rs)",
+      "WebFetch(domain:mcpmarket.com)",
+      "WebFetch(domain:jms55.github.io)",
+      "WebFetch(domain:paulbourke.net)",
+      "WebFetch(domain:doc.qu1x.dev)",
+
       "Bash(git clone:*)",
-      "Bash(./build.sh)",
-      "Bash(pkg-config:*)",
-      "Bash(./simple_test)",
-      "Bash(timeout:*)",
+      "Bash(git init:*)",
       "Bash(git add:*)",
       "Bash(git checkout:*)",
       "Bash(git commit:*)",
       "Bash(git push:*)",
-      "Bash(./bin/gpu_raytracer:*)"
+      "Bash(git pull:*)",
+      "Bash(git config:*)",
+      "Bash(gh auth:*)",
+
+      "Bash(claude mcp:*)",
+      "Bash(claude plugin:*)",
+      "Bash(claude --version)",
+
+      "Bash(cat:*)",
+      "Bash(find:*)",
+      "Bash(mkdir:*)",
+      "Bash(tree:*)",
+      "Bash(wget:*)",
+
+      "Bash(sudo apt:*)",
+      "Bash(sudo apt install:*)",
+      "Bash(apt-cache policy *)",
+      "Bash(apt-cache search *)",
+      "Bash(dpkg -l)",
+      "Bash(lsb_release -a)",
+      "Bash(lspci)",
+      "Bash(lsmod)",
+      "Bash(systemctl is-active *)",
+      "Bash(ps -eo pid,etime,cmd)",
+
+      "Bash(cmake:*)",
+      "Bash(make:*)",
+      "Bash(pkg-config:*)",
+      "Bash(timeout:*)",
+      "Bash(python3 *)",
+
+      "Bash(rustc --version)",
+      "Bash(cargo --version)",
+      "Bash(rustup update *)",
+      "Bash(cargo check *)",
+      "Bash(cargo build *)",
+      "Bash(cargo search *)",
+
+      "Bash(nvidia-smi --query-gpu=name,driver_version --format=csv,noheader)",
+      "Bash(glxinfo)",
+      "Bash(prime-select query *)",
+      "Bash(setxkbmap *)",
+
+      "Read(//tmp/**)",
+      "Read(//etc/X11/**)",
+
+      "Skill(update-config)",
+
+      "mcp__godot-mcp__editor",
+      "mcp__godot-mcp__profiler",
+      "mcp__godot-mcp__godot_docs",
+      "mcp__github__get_file_contents"
     ],
-    "deny": [],
-    "ask": []
+    "deny": [
+      "Bash(rm -rf /*)",
+      "Bash(rm -rf ~/*)",
+      "Bash(rm -rf $HOME/*)"
+    ],
+    "ask": [
+      "Bash(rm:*)",
+      "Bash(rmdir:*)",
+      "Bash(chmod:*)"
+    ]
   }
 }
