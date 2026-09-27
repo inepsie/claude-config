@@ -1,70 +1,57 @@
-# Claude Code Configuration
+# ~/.claude — Configuration utilisateur Claude Code
 
-Configuration personnelle pour Claude Code incluant workflows, préférences et mémoire MCP.
+Configuration globale (scope **user**). Surchargée par les configs projet
+(`<repo>/.claude/`) et par les flags CLI au lancement de `claude`.
 
-## Structure
+## Hiérarchie de précédence (haut = écrase bas)
 
 ```
-.claude/
-├── claude.md              # Configuration principale et workflows
-├── config.json            # Configuration MCP servers
-├── plugins/               # Système de plugins
-│   └── config.json
-└── README.md              # Ce fichier
+managed (entreprise/MDM)        # non utilisé ici
+CLI flags                       # --model, --permission-mode, ...
+<repo>/.claude/settings.local.json   # perso projet (gitignored)
+<repo>/.claude/settings.json         # partagé équipe (commité)
+~/.claude/settings.local.json        # perso global  ← ici
+~/.claude/settings.json              # global        ← ici
 ```
 
-## Installation
+Les arrays `permissions.allow` se concatènent et se dédupliquent entre
+niveaux (ils ne se remplacent pas).
 
-1. Cloner ce dépôt dans votre home :
-```bash
-git clone https://github.com/VOTRE_USERNAME/claude-config.git ~/.claude-backup
-cp -r ~/.claude-backup/* ~/.claude/
-```
+## Fichiers présents
 
-2. Vérifier la configuration MCP Memory :
-```bash
-cat ~/.claude/config.json
-```
+| Fichier / dossier | Rôle |
+|---|---|
+| `CLAUDE.md` | Instructions utilisateur globales (chargées à chaque session) |
+| `settings.json` | Réglages globaux (model, statusLine, vim, effort) |
+| `settings.local.json` | Permissions globales (gitignored) |
+| `skills/` | Skills perso transversaux ; les skills de niche vivent dans leur projet (`<repo>/.claude/skills`) ou portent un `paths:` (`proc-env-*`) |
+| `agents/` | Sous-agents perso (vide actuellement — overrides éventuels) |
+| `hooks/` | Hooks PreToolUse (`protect-secrets.sh`) |
+| `plugins/` | Marketplaces et plugins (géré par Claude Code) |
+| `projects/` | Index de sessions par projet (système) |
+| `sessions/`, `todos/`, `shell-snapshots/`, `cache/`, `file-history/`, `statsig/`, `telemetry/`, `paste-cache/`, `session-env/`, `tasks/`, `debug/`, `downloads/`, `backups/` | Données runtime (système) |
+| `.credentials.json` | Tokens (géré par Claude Code, ne pas éditer) |
 
-## Configuration MCP Servers
+`~/.claude.json` (à la racine du home) est l'index d'état du CLI : ne pas
+éditer à la main.
 
-### Memory Server
-Le serveur MCP Memory est configuré pour utiliser :
-- **Répertoire de données** : `~/.config/nvim/mcp-memory`
-- **Format** : JSON avec tags et contexte
-- **Commandes** : Via `npx @modelcontextprotocol/server-memory`
+## Plugins et contexte par projet
 
-### GitHub Server
-Le serveur MCP GitHub nécessite un token d'accès personnel :
-1. Créer un token GitHub avec les permissions appropriées
-2. L'ajouter dans `.credentials.json` :
-```json
-{
-  "githubToken": "votre_token_github_ici"
-}
-```
-3. Le serveur utilisera automatiquement ce token depuis `.credentials.json`
+Les marketplaces locales (meta-builder, bevy-builder, gamedev-harness) sont déclarées
+ici, mais seul `meta-builder` est activé pour tout le compte. Les plugins Bevy
+s'activent dans le `.claude/settings.json` de chaque projet Bevy (modèle :
+`~/code/eclat/.claude/settings.json`). Lancer `claude` depuis le dossier du projet.
 
-## Workflow intégré
+## MCP servers
 
-Voir `claude.md` pour le workflow complet incluant :
-- Consultation automatique de la mémoire MCP
-- Conventions de code standardisées  
-- Frameworks et outils préférés
-- Patterns d'architecture
-- Test auto-push système ✅
+Configurés via `claude mcp add ...`. La déclaration finale (commande,
+env vars, tokens) est stockée dans `~/.claude.json` (géré par Claude Code,
+hors git). L'ancien `config.json` au format non reconnu a été supprimé.
 
-## Personnalisation
+Serveurs actuellement actifs (scope user) :
 
-Modifier `claude.md` pour ajuster :
-- Instructions comportementales
-- Conventions de nommage
-- Outils préférés
-- Patterns d'architecture
+| Nom | Rôle | Données |
+|---|---|---|
+| `github` | API GitHub (issues, PR, repos) | token via `gh auth token` |
 
-## Sauvegarde
-
-Les fichiers sensibles (`.credentials.json`) et temporaires (sessions, todos) sont exclus du versioning via `.gitignore`.
-
----
-*Configuration générée pour Claude Code - Assistant IA d'Anthropic*
+Lister : `claude mcp list`. Retirer : `claude mcp remove <name>`.

@@ -1,24 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Read(//home/e20230004281/.config/nvim/mcp-memory/**)",
-      "Bash(git init:*)",
-      "Bash(git add:*)",
-      "Bash(git branch:*)",
-      "Bash(git remote add:*)",
-      "Bash(git push:*)",
-      "Bash(git remote set-url:*)",
-      "Bash(gh auth:*)",
-      "Bash(npm install:*)",
-      "Bash(ssh-add:*)",
-      "Read(//home/e20230004281/.ssh/**)",
-      "Bash(GIT_SSH_COMMAND=\"ssh -o BatchMode=yes\" git push -u origin main)",
-      "Bash(git commit:*)",
-      "Bash(git reset:*)",
-      "Read(//home/e20230004281/.config/nvim/**)",
-      "WebSearch"
-    ],
-    "deny": [],
-    "ask": []
+      "Bash(python3 -c \"import json; json.load\\(open\\('/home/theo/.claude/settings.local.json'\\)\\); print\\('OK'\\)\")",
+      "Bash(awk '{print $2}')",
+      "Read(//tmp/**)",
+      "Bash(python3 *)",
+      "Bash(git *)"
+    ]
   }
 }

@@ -45,3 +45,11 @@ scheduled_tasks.lock
 .last-cleanup
 telemetry/
 plans/
+# Runtime Claude Code (démon, tâches, état) — ajouté le 2026-09-27
+daemon/
+daemon.lock
+daemon.status.json
+jobs/
+state/
+plugins/synced/
+.last-update-result.json
